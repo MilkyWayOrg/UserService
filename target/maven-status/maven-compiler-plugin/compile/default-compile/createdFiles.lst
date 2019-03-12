@@ -1,0 +1,12 @@
+org\milkyway\user\service\impl\UserServiceImpl.class
+org\milkyway\user\controller\UserController.class
+org\milkyway\user\resources\UserResource.class
+org\milkyway\user\exceptions\ResourceNotFoundException.class
+org\milkyway\user\SwaggerConfig.class
+org\milkyway\user\exceptions\ResourceAlreadyExistsException.class
+org\milkyway\user\repository\UserRepository.class
+org\milkyway\user\exceptions\InvalidArgumentException.class
+org\milkyway\user\service\UserService.class
+org\milkyway\user\entity\UserEntity.class
+org\milkyway\user\util\SelfServiceUtil.class
+org\milkyway\user\UserApplication.class
