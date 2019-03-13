@@ -23,6 +23,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import io.swagger.annotations.ApiParam;
 
 
 /**
@@ -79,7 +80,7 @@ public class UserController {
 	 * @return UserResource
 	 */
 	@PostMapping("/user")
-	public ResponseEntity<UserResource> createUser(@Valid @RequestBody UserEntity userEntity,Errors errors){
+	public ResponseEntity<UserResource> createUser(@Valid @RequestBody UserEntity userEntity,@ApiParam(hidden = true) Errors errors){
 		if(errors.hasErrors())
 			SelfServiceUtil.throwInvalidArgumentException(errors);
 		UserEntity savedUserEntity=userService.createUser(userEntity);
@@ -91,7 +92,7 @@ public class UserController {
 	 * @return UserResource
 	 */
 	@PutMapping("/user/{userId}")
-	public ResponseEntity<UserResource> updateUser(@PathVariable(name="userId") String repoKeyOrId,@Valid @RequestBody UserEntity userEntity,Errors errors){
+	public ResponseEntity<UserResource> updateUser(@PathVariable(name="userId") String repoKeyOrId,@Valid @RequestBody UserEntity userEntity,@ApiParam(hidden = true)Errors errors){
 		if(errors.hasErrors())
 			SelfServiceUtil.throwInvalidArgumentException(errors);
 		userService.updateUser(userEntity);
