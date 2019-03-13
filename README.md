@@ -1,37 +1,47 @@
-## Welcome to GitHub Pages
+## User Service - Spring Boot REST API
 
-You can use the [editor on GitHub](https://github.com/MilkyWayOrg/UserService/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### GET - http://localhost:7272/api/user
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+To get list of users
 
 ```markdown
-Syntax highlighted code block
+Reponses
+- 200 ok
 
-# Header 1
-## Header 2
-### Header 3
+- 404 not found
+```
+### GET - http://localhost:7272/api/user/{userNameOrId}
 
-- Bulleted
-- List
+To get a user by UserName or Id
 
-1. Numbered
-2. List
+```markdown
+Reponses
+- 200 ok
 
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+- 404 not found
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### POST - http://localhost:7272/api/user
 
-### Jekyll Themes
+To create a user
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MilkyWayOrg/UserService/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+```markdown
+Request
+{
+"userName":"PH00487322",
+"name":"Prashanth H",
+"role":"DEV",
+"password":"12345"
+}
+```
 
-### Support or Contact
+```markdown
+Reponse
+- 201 created
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- 404 not found
+```
+
+## H2 DB Console : http://localhost:7272/h2-console/
+## Swagger Documentaion : http://localhost:7272/swagger-ui.html
+
