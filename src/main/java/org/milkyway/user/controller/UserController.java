@@ -33,7 +33,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
  *
  * */
 @RestController
-@RequestMapping("userService")
+@RequestMapping("api")
 public class UserController {
 	
 	@Autowired UserService userService;
