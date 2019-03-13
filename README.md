@@ -34,7 +34,7 @@ Request
 ```
 
 ```markdown
-Reponse
+Responses
 - 201 created
 - 409 conflict
 ```
