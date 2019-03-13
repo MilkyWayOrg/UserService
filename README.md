@@ -5,9 +5,8 @@
 To get list of users
 
 ```markdown
-Reponses
+Responses
 - 200 ok
-
 - 404 not found
 ```
 ### GET - http://localhost:7272/api/user/{userNameOrId}
@@ -15,9 +14,8 @@ Reponses
 To get a user by UserName or Id
 
 ```markdown
-Reponses
+Responses
 - 200 ok
-
 - 404 not found
 ```
 
@@ -38,8 +36,7 @@ Request
 ```markdown
 Reponse
 - 201 created
-
-- 404 not found
+- 409 conflict
 ```
 
 ## H2 DB Console : http://localhost:7272/h2-console/
