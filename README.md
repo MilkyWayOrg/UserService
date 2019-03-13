@@ -26,7 +26,7 @@ To create a user
 ```markdown
 Request
 {
-"userName":"PH00487322",
+"userName"PH0012345",
 "name":"Prashanth H",
 "role":"DEV",
 "password":"12345"
