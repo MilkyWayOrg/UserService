@@ -1,13 +1,12 @@
 #!groovy
 pipeline{
-    agent any{
+    agent any
+    stages{
+    stage "Code Checkout & Build"{
+      steps{{
         checkout scm
         sh 'mvn clean package'
     }
-    stages{
-    stage "TEST"{
-      steps{
-        echo "Hi"
       }
     } 
     }
