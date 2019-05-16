@@ -1,26 +1,27 @@
-Pipeline{
+pipeline{
 agent any
 tools {
 	maven 'apache-maven-3.6.0' 
 }
-Stages{
-Stage('clone source code from the repository'){
-Steps{
+stages{
+stage('clone source code from the repository'){
+steps{
 echo'cloning';
 }
 }
-Stage('compileing the souce code'){
-Steps{
+stage('compileing the souce code'){
+steps{
 mvn clean compile;
 }
 }
-Stage('Packaging  the Souxce code'){
-Steps{
+stage('Packaging  the Souxce code'){
+steps{
 mvn clean install;
 }
 }
-Stage('Deploying the source code'){
-Steps{
+stage('Deploying the source code'){
+steps{
+	mvn clean deploy
 echo'Deploying';
 }
 }
